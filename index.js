@@ -1,13 +1,13 @@
-const express = require("express");
+import express from "express";
 const app = express();
 const port = 3000;
 
 //conectando ao MongoDB
-const connectDatabase = require("./src/database/db");
+import connectDatabase from "./src/database/db.js";
 connectDatabase();
 
 //Trazendo rotas
-const userRoute = require("./src/routes/user.route");
+import userRoute from "./src/routes/user.route.js";
 
 // Configurando Uso do Json
 app.use(express.json());

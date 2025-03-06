@@ -1,8 +1,14 @@
 import express from "express";
 const app = express();
-const port = 3000;
-import dotenv from "dotenv";
+const port = 3000 | process.env.PORT;
 
+//cors
+
+import cors from "cors";
+app.use(cors());
+
+//dotenv
+import dotenv from "dotenv";
 dotenv.config();
 //conectando ao MongoDB
 import connectDatabase from "./src/database/db.js";

@@ -11,6 +11,7 @@ connectDatabase();
 //Trazendo rotas
 import userRoute from "./src/routes/user.route.js";
 import authRoute from "./src/routes/auth.route.js";
+import memberRoute from "./src/routes/member.route.js";
 
 // Configurando Uso do Json
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use(express.json());
 // usando rotas
 app.use("/user", userRoute);
 app.use("/auth", authRoute);
+app.use("/member", memberRoute);
 
 //SERVIDOR RODANDO
 app.listen(port, () => console.log(`Servidor rodando na porta: ${port}!`));

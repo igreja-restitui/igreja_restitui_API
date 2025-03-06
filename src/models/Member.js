@@ -21,6 +21,10 @@ const MemberSchema = new mongoose.Schema({
     type: String,
     default: "nãotem@gmail.com",
   },
+  tipo: {
+    type: String,
+    default: "visitante", // default role is user
+  },
 });
 
 const Member = mongoose.model("Member", MemberSchema);

@@ -21,5 +21,9 @@ app.use("/user", userRoute);
 app.use("/auth", authRoute);
 app.use("/member", memberRoute);
 
+app.get("/", (req, res) => {
+  res.send("API Restitui Mern");
+});
+
 //SERVIDOR RODANDO
 app.listen(port, () => console.log(`Servidor rodando na porta: ${port}!`));
